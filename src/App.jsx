@@ -16,12 +16,18 @@ import './index.css'
   const handleAddExpense = (newExpense) => {
     setExpenses([...expenses, newExpense]);
   };
+
+  const handleDeleteExpense = (indexToRemove) => {
+    setExpenses(expenses.filter((_, index) => index !== indexToRemove));
+  };
+  
   return (
     <div className="App">
       <h1 className="text-2xl font-bold mb-4">Expense Tracker</h1>
+      <p>You can check on your expenses through this tracker as it makes it easier to track everything</p>
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <ExpenseForm onAddExpense={handleAddExpense} />
-      <ExpenseTable expenses={filteredExpenses} />
+      <ExpenseTable expenses={filteredExpenses} onDelete={handleDeleteExpense} />
     </div>
   )
 }

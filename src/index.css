@@ -99,3 +99,11 @@
     background-color: #f1f5f9;
   }
   
+  button.delete-btn {
+    background-color: #ef4444;
+  }
+  
+  button.delete-btn:hover {
+    background-color: #dc2626;
+  }
+  
