@@ -51,7 +51,7 @@ function ExpenseForm({ onAddExpense }) {
            onChange={(e) => setAmount(e.target.value)} />
 
          <input 
-           type="text"
+           type="date"
            placeholder='date'
            value={date}
            onChange={(e) => setDate(e.target.value)} />
@@ -59,6 +59,6 @@ function ExpenseForm({ onAddExpense }) {
         <button type='submit'>Add Expense</button>              
     </form>
   ) 
-}
+}   
 
 export default ExpenseForm
